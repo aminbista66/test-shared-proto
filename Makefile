@@ -16,9 +16,8 @@ protos:
 	fi
 
 	@echo "Generating Protobuf files for service: $(SERVICENAME)"
-	mkdir -p $(PROTO_OUT)/$(SERVICENAME)
 
-	protoc --proto_path=$(PROTO_SRC) --go_out=$(PROTO_OUT)/$(SERVICENAME) --go-grpc_out=$(PROTO_OUT)/$(SERVICENAME) $(PROTO_SRC)/$(SERVICENAME)/*.proto
+	protoc --proto_path=$(PROTO_SRC) --go_out=. --go-grpc_out=. $(PROTO_SRC)/$(SERVICENAME)/*.proto
 
 # Clean generated files
 clean:
