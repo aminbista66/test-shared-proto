@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package auth;
-option go_package = "github.com/aminbista/test-shared-proto/gen/auth";
+option go_package = "github.com/aminbista66/test-shared-proto/gen/auth";
 
 service AuthService {
     rpc Login(LoginRequest) returns (LoginResponse);
